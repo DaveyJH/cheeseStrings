@@ -36,3 +36,33 @@ Neither method will have any effect on any other character:
 
 // "My OtHER StrinG"
 ```
+
+`String.alternateCaseWord()` : alternates the case of a word. If first character
+in string is uppercase A-Z, first character of result will be uppercase, else it
+will start lowercase:
+
+```javascript
+"my string".capitalize()
+
+// "My string"
+```
+
+`String.reverse()` : reverses a string:
+
+```javascript
+"my other string".toTitleCase()
+
+// "My Other String"
+```
+
+Method order will affect results:
+
+```javascript
+"string".capitalize().alternateCaseWord()
+
+// "StRiNg"
+
+"string".alternateCaseWord().capitalize()
+
+// "STrInG"
+```
