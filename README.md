@@ -16,11 +16,11 @@ Use:
 // "My string"
 ```
 
-`String.titleCase()` : capitalizes first character of every consecutive string
+`String.toTitleCase()` : capitalizes first character of every consecutive string
 of characters separated by a space:
 
 ```javascript
-"my other string".titleCase()
+"my other string".toTitleCase()
 
 // "My Other String"
 ```
@@ -32,7 +32,7 @@ Neither method will have any effect on any other character:
 
 // "My stRING"
 
-"my otHER strinG".titleCase()
+"my otHER strinG".toTitleCase()
 
 // "My OtHER StrinG"
 ```
