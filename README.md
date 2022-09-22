@@ -42,9 +42,11 @@ in string is uppercase A-Z, first character of result will be uppercase, else it
 will start lowercase:
 
 ```javascript
-"my string".capitalize()
+"string".alternateCaseWord()
+// "sTrInG"
 
-// "My string"
+"Another".alternateCaseWord()
+// "AnOtHeR"
 ```
 
 `String.reverse()` : reverses a string:
@@ -52,7 +54,7 @@ will start lowercase:
 ```javascript
 "my other string".toTitleCase()
 
-// "My Other String"
+// "gnirts rehto ym"
 ```
 
 Method order will affect results:
