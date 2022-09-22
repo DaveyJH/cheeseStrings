@@ -12,7 +12,6 @@ Use:
 
 ```javascript
 "my string".capitalize()
-
 // "My string"
 ```
 
@@ -21,7 +20,6 @@ of characters separated by a space:
 
 ```javascript
 "my other string".toTitleCase()
-
 // "My Other String"
 ```
 
@@ -29,11 +27,9 @@ Neither method will have any effect on any other character:
 
 ```javascript
 "my stRING".capitalize()
-
 // "My stRING"
 
 "my otHER strinG".toTitleCase()
-
 // "My OtHER StrinG"
 ```
 
@@ -53,7 +49,6 @@ will start lowercase:
 
 ```javascript
 "my other string".toTitleCase()
-
 // "gnirts rehto ym"
 ```
 
@@ -61,10 +56,8 @@ Method order will affect results:
 
 ```javascript
 "string".capitalize().alternateCaseWord()
-
 // "StRiNg"
 
 "string".alternateCaseWord().capitalize()
-
 // "STrInG"
 ```
