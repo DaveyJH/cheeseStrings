@@ -1,0 +1,26 @@
+{
+  "name": "cheesestrings",
+  "version": "1.0.0",
+  "description": "A few additional methods for String objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveyJH/cheeseStrings.git"
+  },
+  "keywords": [
+    "string",
+    "strings",
+    "capitalize",
+    "title",
+    "case"
+  ],
+  "author": "Dave Horrocks https://github.com/DaveyJH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveyJH/cheeseStrings/issues"
+  },
+  "homepage": "https://github.com/DaveyJH/cheeseStrings#readme"
+}
