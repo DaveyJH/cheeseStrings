@@ -48,7 +48,7 @@ will start lowercase:
 `String.reverse()` : reverses a string:
 
 ```javascript
-"my other string".toTitleCase()
+"my other string".reverse()
 // "gnirts rehto ym"
 ```
 
