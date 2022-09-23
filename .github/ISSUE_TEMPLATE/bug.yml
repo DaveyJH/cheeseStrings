@@ -9,22 +9,30 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
     id: what-happened
     attributes:
       label: What happened? - Please be specific!
-      description: Also tell us, what did you expect to happen/not happen?
+      description: |
+        Also tell us, what did you expect to happen/not happen?
+        Feel free to attach gifs/images that may help.
       placeholder: "When using method `x`, I expected `y` and found that `z` happened"
     validations:
       required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important do you think this issue is?
+      description: |
+        Does it prevent use? --> MUST!
+        Would it vastly improve a feature, but is not causing a block? --> Should
+        Is it something you feel would be nice to see resolved, but has little impact? --> Could
+
+        This will be up for review, the priority may be changed.
+      options:
+        - MUST!
+        - should
+        - could
   - type: input
     id: version
     attributes:
@@ -39,26 +47,27 @@ body:
       label: Operating System / Environment
       description: Please provide details and versions regarding the OS and envirnomnent.
       placeholder: |
-        Windows 10 Version 21H2
+        OS: Windows 10 Version 21H2
 
-        Chrome browser Version 105.0.5195.127 (Official Build) (64-bit)
+        Browser: Chrome browser Version 105.0.5195.127 (Official Build) (64-bit)
 
-        GitHub pages deployed site https://myUser.github.io/myRepo
+        Node: 13.14.0
+        npm: 7.6.1
 
-        Repository https://github.com/myUser/myRepo.git
+        GitHub pages deployed site [mySite](https://myUser.github.io/myRepo)
+        Repository [myRepo](https://github.com/myUser/myRepo.git)
     validations:
       required: true
   - type: textarea
     id: replicate
     attributes:
       label: How can I replicated the issue?
-      description: Please provide specific steps, markdown syntax enabled.
+      description: Please provide specific steps.
       placeholder: |
-        - install package with `npm i cheesestrings`
-        - import using `require ("cheesestrings")`
-        - string = "this is my string"
-        - `string.reverse().capitalize()`
-      render: markdown
+        1 install package with `npm i cheesestrings`
+        2 import using `require ("cheesestrings")`
+        3 string = "this is my string"
+        4 `console.log(string.reverse().capitalize())`
     validations:
       required: true
   - type: textarea
@@ -67,3 +76,11 @@ body:
       label: Relevant log output/errors
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
