@@ -35,3 +35,21 @@ String.prototype.alternateCaseWord = function() {
 String.prototype.reverse = function () {
   return [...this].reverse().join("");
 };
+
+/**
+ * converts string into BEM style CSS selector
+ * @param {Boolean} PMS prepends the return value with a `.` if `true`
+ * @param {String} breakChar string that separates block, element and modifier
+ * @returns {String} BEM style string
+ */
+String.prototype.BEMinate = function (PMS=false, breakChar="\\|") {
+  const regex = new RegExp(`(.+)${breakChar}(.+)${breakChar}(.+)`);
+  try {
+    let [ , block, elem, mod] = this.match(regex).map(
+      x => x.trim().split(" ").join("-"));
+    return `${PMS?".":""}${block}__${elem}--${mod}`;
+  } catch (e) {
+    console.log(e);
+  }
+  return String(this);
+};

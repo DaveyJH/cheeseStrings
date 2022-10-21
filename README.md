@@ -52,15 +52,25 @@ will start lowercase:
 // "gnirts rehto ym"
 ```
 
-Method order will affect results:
+`String.BEMinate(PMS=true, breakChar="\\|")` : converts a string to a BEM style structure:
 
 ```javascript
-"string".capitalize().alternateCaseWord()
-// "StRiNg"
-
-"string".alternateCaseWord().capitalize()
-// "STrInG"
+"block identifier | element selector | modifier class".BEMinate()
+// "block-identifier__element-selector--modifier-class"
 ```
+
+- Accepts two optional arguments:
+
+  - `PMS` : prepended multiple selector, i.e. adds a period (`.`) character
+    before the string.
+  - `breakChar` : string used as break character, can be multiple characters.
+    **Regex special characters must be escaped with `\\`.**
+
+    ```javascript
+    "block |identifier| ||| element |selector| ||| modifier class".
+      BEMinate(true, "\\|\\|\\|");
+    // ".block-|identifier|__element-|selector|--modifier-class"
+    ```
 
 ## Contributions
 
